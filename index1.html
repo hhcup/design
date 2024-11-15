@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>个人作品</title>
+        <link rel="icon" href="./asstes/img/favicon.ico" />
+        <script src="./asstes/js/jquery.js"></script>
+        <link rel="stylesheet" href="./asstes/css/swiper.css" />
+        <script src="./asstes/js/swiper.js"></script>
+        <style>
+            html,
+            body {
+                position: relative;
+                height: 100%;
+            }
+
+            body {
+                background: #eee;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+
+            .swiper {
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            .swiper-pagination-bullet {
+                transition: all ease 0.3s;
+            }
+            .swiper-pagination-bullet-active {
+                height: 20px;
+                border-radius: 4px;
+                background-color: #89728f;
+                box-shadow: 0 0 5px 0 #333;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            .entry-list {
+                position: absolute;
+                width: 82.3%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .entry-list a {
+                width: 23%;
+            }
+            .entry-list .entry {
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+                transition: all ease 0.3s;
+                border-radius: 10%;
+            }
+            .entry-list .entry:hover {
+                box-shadow: 8px 8px 30px rgb(214, 207, 197);
+            }
+            .entry-list .entry.deep:hover {
+                box-shadow: 8px 8px 30px rgba(137, 114, 143, 0.8);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./asstes/img/p1v2.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./asstes/img/p2.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./asstes/img/p3.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./asstes/img/p4.png" alt="" />
+                    <div class="entry-list">
+                        <a href="./ecommerce.html" target="blank"
+                            ><img
+                                src="./asstes/img/1.png"
+                                alt=""
+                                class="entry deep"
+                        /></a>
+                        <a href="./photos.html" target="blank"
+                            ><img src="./asstes/img/2.png" alt="" class="entry"
+                        /></a>
+                        <a href="./interest.html" target="blank"
+                            ><img
+                                src="./asstes/img/3.png"
+                                alt=""
+                                class="entry deep"
+                        /></a>
+                        <a href="./others.html" target="blank"
+                            ><img src="./asstes/img/4.png" alt="" class="entry"
+                        /></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./asstes/img/p5.png" alt="" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script>
+            var swiper = new Swiper(".swiper", {
+                direction: "vertical",
+                slidesPerView: 1,
+                spaceBetween: 0,
+                mousewheel: true,
+                mousewheel: {
+                    thresholdTime: 500,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>
